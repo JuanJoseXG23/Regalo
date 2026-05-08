@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitacion - Viernes Santo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="scene" aria-label="Invitacion interactiva tipo tiquete">
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <section class="invitation" aria-labelledby="title">
+      <div class="curtain curtain-left" aria-hidden="true"></div>
+      <div class="curtain curtain-right" aria-hidden="true"></div>
+
+      <div class="topline">
+        <span class="tag">Teatro de Prado</span>
+        <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Activar ambiente">
+          <span class="sound-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="ticket-wrap" id="ticketWrap">
+        <article class="ticket" id="ticket">
+          <div class="ticket-main">
+            <div class="ticket-ribbon">
+              <span>Ticket teatral</span>
+              <span>Entrada especial</span>
+              <span>Funcion nocturna</span>
+            </div>
+
+            <div class="ticket-content">
+              <header class="event-head">
+                <div>
+                  <p class="eyebrow">Invitacion para Maria Isabel</p>
+                  <h1 id="title">Viernes Santo</h1>
+                  <p class="company">Teatriados</p>
+                </div>
+                <div class="seal" aria-label="Teatro">
+                  <span>8:00</span>
+                  <small>PM</small>
+                </div>
+              </header>
+
+              <div class="theatre-line" aria-label="Detalle de la invitacion">
+                <div class="name-block">
+                  <span class="label">Invitada especial</span>
+                  <span class="name">Maria Isabel</span>
+                </div>
+                <div class="ornament" aria-hidden="true">
+                  <span></span>
+                </div>
+                <div class="name-block name-block-right">
+                  <span class="label">Acompana</span>
+                  <span class="name">Juan Jose</span>
+                </div>
+              </div>
+
+              <dl class="details">
+                <div>
+                  <dt>Fecha</dt>
+                  <dd>8 de mayo de 2026</dd>
+                </div>
+                <div>
+                  <dt>Hora</dt>
+                  <dd>8:00 PM</dd>
+                </div>
+                <div>
+                  <dt>Destino</dt>
+                  <dd>Teatro</dd>
+                </div>
+                <div>
+                  <dt>Obra</dt>
+                  <dd>Viernes Santo</dd>
+                </div>
+              </dl>
+
+              <button class="reveal" type="button" id="revealButton">
+                <span>Desprender invitacion</span>
+              </button>
+            </div>
+          </div>
+
+          <aside class="ticket-stub" aria-label="Colilla desprendible">
+            <div class="stub-inner">
+              <p class="stub-label">Invitada</p>
+              <h2>Maria Isabel</h2>
+              <div class="mini-detail">
+                <span>Con</span>
+                <strong>Juan Jose</strong>
+              </div>
+              <div class="mini-detail">
+                <span>Lugar</span>
+                <strong>Teatro de Prado</strong>
+              </div>
+              <canvas id="barcode" width="220" height="72" aria-label="Codigo del ticket"></canvas>
+              <p class="serial">TQ-0805-TEATRO</p>
+            </div>
+          </aside>
+        </article>
+      </div>
+
+      <div class="message-panel" id="messagePanel" aria-live="polite">
+        <p>No conocia el teatro hasta que lo conoci a tu lado. Desde entonces se volvio algo que disfruto mas de lo que imaginaba, y hoy me hace feliz compartir contigo momentos que se que tambien te hacen feliz.</p>
+        <button class="reset" type="button" id="resetButton">Volver a unir el ticket</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
